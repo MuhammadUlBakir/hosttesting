@@ -4,8 +4,8 @@
   "framework": "vite",
   "routes": [
     {
-      "src": "/images",
-      "dest": "/api/images/1706868624255-916174191-The Six-Day War of 1967.jpg"
+      "src": "/api/images/(.*)",
+      "dest": "/api/images/$1"
     },
     {
       "src": "/api/(.*)",
