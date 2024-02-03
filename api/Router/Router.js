@@ -11,11 +11,11 @@ router.use(express.json());
 router.use(express.urlencoded({ extended: false }));
 router.use(express.static(path.join(__dirname, "../")));
 
-app.get("/hello", (req, res) => {
+router.get("/hello", (req, res) => {
     res.send("Hello");
   });
   
-  app.get("/getdata", (req, res) => {
+  router.get("/getdata", (req, res) => {
     res.json({
       name: "muhammad-ul-Bakir",
     });
