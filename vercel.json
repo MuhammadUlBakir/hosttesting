@@ -1,7 +1,14 @@
 {
-  "buildCommand": "cd client && pnpm install && pnpm run build",
-  "outputDirectory": "client/dist",
-  "framework": "vite",
+  "builds": [
+    {
+      "src": "/api/.*",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "/client/.*",
+      "use": "@vercel/static"
+    }
+  ],
   "routes": [
     {
       "src": "/api/images/(.*)",

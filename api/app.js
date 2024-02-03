@@ -4,6 +4,6 @@ const app = express();
 const Port = process.env.PORT || 8000;
 
 app.use("/api", require("./Router/Router"));
-// app.use(express.static(path.join(__dirname, "./images")));
+app.use('/api/images', express.static(path.join(__dirname, "./images")));
 
 app.listen(Port, () => console.log("server listening on port 8000"));
