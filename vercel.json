@@ -2,10 +2,18 @@
   "buildCommand": "cd client && pnpm install && pnpm run build",
   "outputDirectory": "client/dist",
   "framework": "vite",
-  "rewrites": [
+  "routes": [
     {
-      "source": "/api/(.*)",
-      "destination": "/api/app.js"
+      "src": "/api/images/(.*)",
+      "dest": "/api/assets/images"    
+    },
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/app.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/client/dist/$1"
     }
   ]
 }
