@@ -9,7 +9,6 @@ router.use(cors());
 router.use(morgan("dev"));
 router.use(express.json());
 router.use(express.urlencoded({ extended: false }));
-router.use(express.static(path.join(__dirname, "../images")));
 
 router.get("/hello", (req, res) => {
   res.send("Hello");
@@ -20,5 +19,9 @@ router.get("/getdata", (req, res) => {
     name: "muhammad-ul-Bakir",
   });
 });
+
+// router.get("/getimages", (req, res) => {
+
+// })
 
 module.exports = router;
