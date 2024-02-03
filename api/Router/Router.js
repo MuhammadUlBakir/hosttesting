@@ -9,7 +9,7 @@ router.use(cors());
 router.use(morgan("dev"));
 router.use(express.json());
 router.use(express.urlencoded({ extended: false }));
-router.use('/images', express.static(path.join(__dirname, '../images')));
+// router.use('/images', express.static(path.join(__dirname, '../images')));
 
 router.get("/hello", (req, res) => {
   res.send("Hello");
