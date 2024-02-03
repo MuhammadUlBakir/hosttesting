@@ -14,4 +14,10 @@ app.get("/api/hello", (req, res) => {
   res.send("Hello");
 });
 
+app.get("/api/getdata", (req, res) => {
+  res.json({
+    name: "muhammad-ul-Bakir",
+  });
+})
+
 app.listen(Port, () => console.log("server listening on port 8000"));
