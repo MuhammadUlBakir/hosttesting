@@ -1,7 +1,7 @@
-const express = require('express');
+const express = require("express");
 const cors = require("cors");
 const morgan = require("morgan");
-const path = require("path")
+const path = require("path");
 
 const router = express.Router();
 
@@ -9,17 +9,16 @@ router.use(cors());
 router.use(morgan("dev"));
 router.use(express.json());
 router.use(express.urlencoded({ extended: false }));
-router.use(express.static(path.join(__dirname, "../")));
+router.use(express.static(path.join(__dirname, "../images")));
 
 router.get("/hello", (req, res) => {
-    res.send("Hello");
-  });
-  
-  router.get("/getdata", (req, res) => {
-    res.json({
-      name: "muhammad-ul-Bakir",
-    });
-  })
+  res.send("Hello");
+});
 
-  
-  module.exports = router
+router.get("/getdata", (req, res) => {
+  res.json({
+    name: "muhammad-ul-Bakir",
+  });
+});
+
+module.exports = router;
